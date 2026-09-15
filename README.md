@@ -40,6 +40,22 @@ Make sure `ffmpeg` and `yt-dlp` are installed (e.g. `apt install ffmpeg`,
 python -m media_transcribe
 ```
 
+Or install it as a terminal command (no venv activation needed):
+
+```bash
+pip install .
+mkdir -p ~/.local/bin
+ln -sf "$PWD/.venv/bin/media-transcribe" ~/.local/bin/media-transcribe
+ln -sf "$PWD/.venv/bin/m-transcribe" ~/.local/bin/m-transcribe
+```
+
+Then launch it from anywhere with either:
+
+```bash
+media-transcribe
+m-transcribe
+```
+
 1. Open the **Settings** tab, paste your OpenAI API key, choose an output folder,
    and save (stored in `~/.config/media-transcribe/config.json`).
    The `OPENAI_API_KEY` environment variable is also picked up automatically.

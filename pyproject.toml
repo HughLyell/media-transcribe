@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "media-transcribe"
+version = "0.1.0"
+description = "TUI app that transcribes video/audio/YouTube to markdown via the OpenAI Whisper API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "openai>=1.30",
+    "textual>=0.60",
+]
+
+[project.scripts]
+media-transcribe = "media_transcribe.app:main"
+m-transcribe = "media_transcribe.app:main"
+
+[tool.setuptools.packages.find]
+include = ["media_transcribe*"]
